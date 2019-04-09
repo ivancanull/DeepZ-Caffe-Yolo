@@ -1,0 +1,35 @@
+train_net: "/home/djn/projects/caffe-gpu/models/yolo/cfg/yolov2_tiny_train_bn1.prototxt"
+
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 1e-9
+momentum: 0.9
+weight_decay: 0.0005
+type: "SGD"
+
+# The learning rate policy
+lr_policy: "multistep"
+gamma: 10
+stepvalue: 50
+stepvalue: 150
+stepvalue: 300
+stepvalue: 500
+stepvalue: 900
+
+# Display every 100 iterations
+display: 1
+
+# The maximum number of iterations
+max_iter: 200000
+
+# accumulate gradients over `iter_size` x `batch_size` instances
+iter_size: 4
+
+# snapshot intermediate results
+snapshot: 20000
+snapshot_prefix: "/home/djn/projects/caffe-gpu/models/yolo/weights/yolov2_tiny_train_bn1"
+
+# solver mode: CPU or GPU
+solver_mode: GPU
+
+# don't save when finish training
+snapshot_after_train: false
