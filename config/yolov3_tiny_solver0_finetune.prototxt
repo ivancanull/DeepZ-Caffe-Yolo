@@ -1,0 +1,29 @@
+train_net: "~/Project/DeepZ-Caffe-Yolo/models/yolo/cfg/yolov3_tiny_train_bn0.prototxt"
+
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.000005
+momentum: 0.9
+weight_decay: 0.0005
+type: "SGD"
+
+# The learning rate policy
+lr_policy: "fixed"
+
+# Display every 100 iterations
+display: 1
+
+# The maximum number of iterations
+max_iter: 60000
+
+# accumulate gradients over `iter_size` x `batch_size` instances
+iter_size: 4
+
+# snapshot intermediate results
+snapshot: 10000
+snapshot_prefix: "~/Project/DeepZ-Caffe-Yolo/models/yolo/weights/yolov3_tiny_train_bn0_ft"
+
+# solver mode: CPU or GPU
+solver_mode: GPU
+
+# don't save when finish training
+snapshot_after_train: false
