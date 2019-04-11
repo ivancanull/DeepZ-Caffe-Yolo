@@ -5,7 +5,8 @@ import os
 
 
 if __name__ == '__main__':
-    data_root = '~/Project/DeepZ-Caffe-Yolo/'
+
+    data_root = os.path.dirname(os.path.abspath(__file__))
     train_set_path = os.path.join(data_root, 'meta_data_train_1.txt')
     valid_set_path = os.path.join(data_root, 'meta_data_valid_1.txt')
 
